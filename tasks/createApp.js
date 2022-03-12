@@ -23,7 +23,7 @@ const main = async () => {
 
   console.log(COL_NORMAL("Coping a project ") + "@aualrxse/quick-sand.")
 
-  const res = await create(cwd, appName)
+  const res = await create(appName)
   if (!res) console.error(COL_WARNING("error - ") + "Already created.")
   else successMsg()
 }

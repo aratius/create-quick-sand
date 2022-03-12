@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const sleep = require("./sleep")
 const COL = require("./config")
 const COL_HAPPY = COL.COL_HAPPY

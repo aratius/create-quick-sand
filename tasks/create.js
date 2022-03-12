@@ -2,12 +2,12 @@
 const fs = require("fs")
 const https = require("https")
 const unzip = require('unzipper');
+const SRC_URL = require("./config").SRC_URL
 
-const url = "https://cdn.jsdelivr.net/gh/aratius/quick-sand@master/quick-sand.zip"
-const create = async (cwd, appName) => {
+const create = async (appName) => {
     return new Promise(r => {
         const out = fs.createWriteStream(`${appName}.zip`)
-        https.get(url, res => {
+        https.get(SRC_URL, res => {
             res.pipe(out)
             res.on("end", () => {
                 const zip = fs.createReadStream(`./${appName}.zip`)
