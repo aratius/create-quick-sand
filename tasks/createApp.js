@@ -25,6 +25,6 @@ const main = async () => {
 
   const res = await create(appName)
   if (!res) console.error(COL_WARNING("error - ") + "Already created.")
-  else successMsg()
+  else successMsg(cwd, appName)
 }
 main()
