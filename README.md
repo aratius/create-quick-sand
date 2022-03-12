@@ -1,76 +1,33 @@
-A Project is based on [Next.js](https://nextjs.org/docs).
-
-To know more about Next.js, see `README_NEXT.md`.
-
 ## Installation
 
-```
-$ npm install
-```
-
-## Create Project
-
-```
-$ npm run create [PROJECT_NAME] [...options]
+```bash
+$ npm install create-quick-sand@latest
 ```
 
-```
-$ npm run create Trail ts
-```
+## Create App
 
-Open [http://localhost:3000/projects/[PROJECT_NAME]](http://localhost:3000/projects/[PROJECT_NAME]) with your browser to see the result.
-
-## Options
-
-```
-$ npm run create Trail ts
+```bash
+$ npx create-quick-sand [APP_NAME]
 ```
 
-| name | description                                         |
-| ---- | --------------------------------------------------- |
-| ts   | A Module which is created is written in TypeScript. |
+```bash
+$ npx create-quick-sand my_app
+```
 
-## Edit Project
+## Start Developing
 
-You can start editing the page by modifying
+- See [here](https://github.com/aratius/quick-sand) to know more.
 
--   `src/pages/projects/[PROJECT_NAME].jsx`
--   `src/components/[PROJECT_NAME]/main.js`
--   `src/styles/[PROJECT_NAME].module.scss`
+```bash
+$ cd [APP_NAME]
 
-The page auto-updates as you edit the file.
-
-### Page Entry Point
-
-`src/pages/projects/[PROJECT_NAME].jsx`
-
-### WebGL Entry Point
-
-`src/components/[PROJECT_NAME]/main.js`
-
--   This class extends from `WebGLBase`.
--   You can access all the public or protected `WebGLBase` api.
-
-**WebGLBase**
-
-| name         | access    | type                                         | description |
-| ------------ | --------- | -------------------------------------------- | ----------- |
-| init()       | public    | method                                       |             |
-| deInit()     | public    | method                                       |             |
-| render()     | public    | method                                       |             |
-| \_onInit()   | protected | method                                       |             |
-| \_onDeInit() | protected | method                                       |             |
-| \_onResize() | protected | method                                       |             |
-| \_onUpdate() | protected | method                                       |             |
-| \_scene      | protected | Scene                                        |             |
-| \_renderer   | protected | WebGLRenderer                                |             |
-| \_camera     | protected | \_PerspectiveCameara \| \_OrthographicCamera |             |
-| \_canvas     | protected | HTMLCanvasElement                            |             |
-| \_settings   | protected | WebGLOptions                                 |             |
-
-### Style Entry Point
-
-`src/styles/[PROJECT_NAME].module.scss`
+# Starts the development server.
+$ npm run dev
+# Builds the app for production.
+$ npm run build
+# Runs the built app in production mode.
+$ npm start
+```
 
 ### Author
 
