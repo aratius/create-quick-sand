@@ -2,7 +2,7 @@
   "name": "create-quick-sand",
   "version": "0.0.14",
   "private": false,
-  "repository": "https://github.com/aratius/QuickSand/",
+  "repository": "https://github.com/aratius/create-quick-sand/",
   "homepage": "https://aualrxse.com/",
   "bin": "./tasks/createApp.js",
   "license": "MIT",
