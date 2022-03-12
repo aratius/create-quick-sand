@@ -16,7 +16,7 @@ const main = async () => {
   const d = new Date()
   let appName = `app_${d.getFullYear()}${d.getMonth()}${d.getDay()}${d.getHours()}${d.getMinutes()}${d.getSeconds()}`
   for(let i = 0; i < arg.length; i++) {
-    if(arg[i].match(/-*(n|name)/) != null) {
+    if(arg[i].match(/(--n|-name)/) != null) {
       if(i + 1 <= arg.length - 1) appName = arg[i+1]
     }
   }
