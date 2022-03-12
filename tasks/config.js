@@ -1,0 +1,13 @@
+
+const chalk = require("chalk")
+const COL_SUCCEED = chalk.hex("#0BE081")
+const COL_HAPPY = chalk.hex("#0BC9E0")
+const COL_NORMAL = chalk.hex("#A49BCC")
+const COL_WARNING = chalk.hex("#E24756")
+
+module.exports = {
+    COL_HAPPY,
+    COL_NORMAL,
+    COL_SUCCEED,
+    COL_WARNING
+}

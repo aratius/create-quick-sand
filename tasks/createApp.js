@@ -1,44 +1,11 @@
 #!/usr/bin/env node
 
-const chalk = require("chalk")
 const create = require("./create")
-const COL_SUCCEED = chalk.hex("#0BE081")
-const COL_HAPPY = chalk.hex("#0BC9E0")
-const COL_NORMAL = chalk.hex("#A49BCC")
-const COL_WARNING = chalk.hex("#E24756")
-
-const sleep = (time) => new Promise(res => setTimeout(res, time))
-let texts = ""
-const ln = () => texts += "\n"
-const log = (t) => {
-  texts += t + "\n"
-  console.clear()
-  console.log(texts)
-}
-const success = async (cwd, appName) => {
-  await sleep(1000)
-  log(COL_HAPPY("created - ") + appName)
-  ln()
-  await sleep(500)
-  log(COL_SUCCEED("success - ") + `Created app at ${cwd}/${appName}`)
-  log("Inside that directory, you can run several commands:");
-  ln()
-  log(COL_HAPPY(" npm run dev"));
-  log("   Starts the development server.");
-  ln()
-  log(COL_HAPPY(" npm run build"));
-  log("   Builds the app for production.");
-  ln()
-  log(COL_HAPPY(" npm start"));
-  log("   Runs the built app in production mode.");
-  ln()
-  await sleep(500)
-  log("We suggest that you begin by typing:");
-  ln()
-  log(COL_HAPPY(" cd ") + appName);
-  log(COL_HAPPY(" npm run dev"));
-  ln()
-}
+const sleep = require("./sleep")
+const successMsg = require("./successMsg")
+const COL = require("./config")
+const COL_NORMAL = COL.COL_NORMAL
+const COL_WARNING = COL.COL_WARNING
 
 const main = async () => {
   console.clear()
@@ -54,10 +21,10 @@ const main = async () => {
     }
   }
 
-  log(COL_NORMAL("Coping a project ") + "@aualrxse/quick-sand.")
+  console.log(COL_NORMAL("Coping a project ") + "@aualrxse/quick-sand.")
 
   const res = await create(cwd, appName)
   if (!res) console.error(COL_WARNING("error - ") + "Already created.")
-  else success()
+  else successMsg()
 }
 main()
