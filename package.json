@@ -1,6 +1,6 @@
 {
   "name": "create-quick-sand",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "private": false,
   "repository": "https://github.com/aratius/create-quick-sand/",
   "homepage": "https://aualrxse.com/",
@@ -11,9 +11,6 @@
     "three",
     "quick-sand"
   ],
-  "scripts": {
-    "create_app": "node ./tasks/createApp.js"
-  },
   "dependencies": {
     "chalk": "^4.1.2",
     "unzipper": "^0.10.11"

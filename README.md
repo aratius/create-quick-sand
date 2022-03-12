@@ -8,6 +8,9 @@ $ npm install create-quick-sand@latest
 
 ```bash
 $ npx create-quick-sand -name [APP_NAME]
+
+# Short hand
+$ npx create-quick-sand --n [APP_NAME]
 ```
 
 ```bash

@@ -13,6 +13,9 @@ const success = async (cwd, appName) => {
     console.log(COL_SUCCEED("success - ") + `Created app at ${cwd}/${appName}`)
     console.log("Inside that directory, you can run several commands:");
     ln()
+    console.log(COL_HAPPY(" npm install"));
+    console.log("   Install the dependencies.");
+    ln()
     console.log(COL_HAPPY(" npm run dev"));
     console.log("   Starts the development server.");
     ln()
@@ -27,6 +30,7 @@ const success = async (cwd, appName) => {
     ln()
     console.log(COL_HAPPY(" cd ") + appName);
     console.log(COL_HAPPY(" npm run dev"));
+    console.log(COL_HAPPY(" npm install"));
     ln()
 }
 
