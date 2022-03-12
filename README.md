@@ -7,11 +7,11 @@ $ npm install create-quick-sand@latest
 ## Create App
 
 ```bash
-$ npx create-quick-sand [APP_NAME]
+$ npx create-quick-sand -name [APP_NAME]
 ```
 
 ```bash
-$ npx create-quick-sand my_app
+$ npx create-quick-sand -name my_app
 ```
 
 ## Start Developing
