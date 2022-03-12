@@ -1,6 +1,6 @@
 {
   "name": "create-quick-sand",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "private": false,
   "repository": "https://github.com/aratius/create-quick-sand/",
   "homepage": "https://aualrxse.com/",
@@ -15,7 +15,7 @@
     "create_app": "node ./tasks/createApp.js"
   },
   "dependencies": {
-    "@aualrxse/quick-sand": "^0.0.4",
+    "@aualrxse/quick-sand": "^0.0.8",
     "chalk": "^4.1.2"
   },
   "devDependencies": {}
