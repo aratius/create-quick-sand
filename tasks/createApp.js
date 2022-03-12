@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require("fs-extra")
-const https = require("https")
-const unzip = require('unzipper');
 const chalk = require("chalk")
+const create = require("./create")
 const COL_SUCCEED = chalk.hex("#0BE081")
 const COL_HAPPY = chalk.hex("#0BC9E0")
 const COL_NORMAL = chalk.hex("#A49BCC")
@@ -42,29 +40,6 @@ const success = async (cwd, appName) => {
   ln()
 }
 
-const copy = async (dir, cwd, appName) => {
-  return new Promise(r => {
-    const out = fs.createWriteStream(`${appName}.zip`)
-    https.get("https://cdn.jsdelivr.net/gh/aratius/quick-sand@master/quick-sand.zip", res => {
-      res.pipe(out)
-      res.on("end", () => {
-        const zip = fs.createReadStream(`./${appName}.zip`)
-        zip.pipe(unzip.Extract({ path: "." }))
-          .promise()
-          .then(async () => {
-            fs.rename("./quick-sand", appName)
-            fs.unlink(`./${appName}.zip`)
-            await success(cwd, appName)
-            r(true)
-          })
-          .catch((e) => {
-            r(false)
-          })
-      })
-    })
-  })
-}
-
 const main = async () => {
   console.clear()
   await sleep(500)
@@ -81,7 +56,8 @@ const main = async () => {
 
   log(COL_NORMAL("Coping a project ") + "@aualrxse/quick-sand.")
 
-  const res = await copy(`${cwd}/node_modules/@aualrxse/quick-sand`, cwd, appName)
+  const res = await create(cwd, appName)
   if (!res) console.error(COL_WARNING("error - ") + "Already created.")
+  else success()
 }
 main()
