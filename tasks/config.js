@@ -5,7 +5,7 @@ const COL_SUCCEED = chalk.hex("#0BE081")
 const COL_HAPPY = chalk.hex("#0BC9E0")
 const COL_NORMAL = chalk.hex("#A49BCC")
 const COL_WARNING = chalk.hex("#E24756")
-const SRC_URL = "https://cdn.jsdelivr.net/gh/aratius/quick-sand@master/quick-sand.zip"
+const SRC_URL = "https://cdn.jsdelivr.net/gh/aratius/create-quick-sand@master/quick-sand.zip"
 
 module.exports = {
     COL_HAPPY,
