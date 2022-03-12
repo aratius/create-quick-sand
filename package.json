@@ -5,6 +5,12 @@
   "repository": "https://github.com/aratius/QuickSand/",
   "homepage": "https://aualrxse.com/",
   "bin": "./tasks/createApp.js",
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "three",
+    "quick-sand"
+  ],
   "scripts": {
     "create_app": "node ./tasks/createApp.js"
   },
