@@ -29,8 +29,8 @@ const success = async (cwd, appName) => {
     console.log("We suggest that you begin by typing:");
     ln()
     console.log(COL_HAPPY(" cd ") + appName);
-    console.log(COL_HAPPY(" npm run dev"));
     console.log(COL_HAPPY(" npm install"));
+    console.log(COL_HAPPY(" npm run dev"));
     ln()
 }
 
